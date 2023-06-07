@@ -1,0 +1,114 @@
+import java.util.*;
+class Stack
+{
+    int n = 5;
+    int data[] = new int[n];
+    int top = -1;
+    
+    void push()
+    {
+        if(top == (n-1))
+        {
+            System.out.println("Stck is full");
+        }
+        else
+        {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the data");
+            int k = sc.nextInt();
+            top = top+1;
+            data[top] = k;
+        }
+    }
+    
+    void pop()
+    {
+        if(top == -1)
+        {
+            System.out.println("The stack is empty");
+        }
+        else
+        {
+            top = top-1;
+        }
+    }
+    
+    void display()
+    {
+        for(int i = top; i>=0; i--)
+        {
+            System.out.println(data[i]);
+        }
+    }
+    
+    void isEmpty()
+    {
+        if(top == -1)
+        {
+            System.out.println("Is Empty");
+        }
+        else
+        {
+            System.out.println("Not Empty");
+        }
+    }
+    
+    void isFull()
+    {
+        {
+        if(top == (n-1))
+        {
+            System.out.println("Is Full");
+        }
+        else
+        {
+            System.out.println("Not Full");
+        }
+    }
+        
+    }
+}
+
+class main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        Stack s = new Stack();
+        int l,d;
+        
+    do
+    {    
+       System.out.println("1 to push");
+       System.out.println("2 to pop");
+       System.out.println("3 to display");
+       System.out.println("Enter your choice");
+        d= sc.nextInt();
+       switch(d)
+       {
+           case 1:
+           {
+               s.push();
+               break;
+           }
+           case 2:
+            {
+                s.pop();
+                break;
+            }
+            case 3:
+            {
+                s.display();
+                break;
+            }
+       }
+       System.out.println("Enter the 0 to menu again");
+       System.out.println("Enter any key to exit");
+       l = sc.nextInt();
+       
+        
+    }while(l==00);
+    System.out.println("exited");
+    
+}
+    }
